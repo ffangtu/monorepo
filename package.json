@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "monorepo",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

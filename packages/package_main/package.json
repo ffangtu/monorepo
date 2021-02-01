@@ -1,0 +1,42 @@
+{
+  "name": "package_main",
+  "version": "0.0.5",
+  "license": "ISC",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@packages/package_test": "^0.0.5",
+    "@umijs/preset-react": "1.x",
+    "umi": "^3.3.7"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@umijs/test": "^3.3.7",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  },
+  "gitHead": "12fc8c6716b658340a0ca8563c435c46e81c1e41"
+}
